@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-HY-Uoa" userLabel="backgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-LP-bxg">
+                                <rect key="frame" x="296" y="40" width="432" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-lD-WTr">
+                                <rect key="frame" x="205" y="538" width="614" height="136"/>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIK-Ds-gKC">
+                                        <rect key="frame" x="0.0" y="0.0" width="614" height="48"/>
+                                        <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Tap">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4W2-Cc-cbE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBs-IX-zWr">
+                                        <rect key="frame" x="0.0" y="88" width="614" height="48"/>
+                                        <color key="backgroundColor" red="0.84346801039999997" green="0.27095168829999999" blue="0.22119942309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbF-5G-SPN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact" spacing="10"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-dG-fEW">
+                                <rect key="frame" x="102.5" y="312" width="819" height="236"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pR8-lD-WTr" secondAttribute="bottom" constant="94" id="499-Ba-ugL">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="pR8-lD-WTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7go-cd-6Fa"/>
+                            <constraint firstItem="Swz-LP-bxg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ee4-EY-i9w"/>
+                            <constraint firstAttribute="trailing" secondItem="nfN-HY-Uoa" secondAttribute="trailing" id="Ldy-CA-HbS"/>
+                            <constraint firstItem="TeZ-dG-fEW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="N4q-YJ-8bV"/>
+                            <constraint firstItem="nfN-HY-Uoa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OrQ-T1-WQ7"/>
+                            <constraint firstItem="Swz-LP-bxg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" constant="22" id="hWK-XB-wvb"/>
+                            <constraint firstItem="pR8-lD-WTr" firstAttribute="top" secondItem="TeZ-dG-fEW" secondAttribute="bottom" constant="-10" id="joJ-zc-X93">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="nfN-HY-Uoa" secondAttribute="bottom" id="l3b-9e-q3z"/>
+                            <constraint firstItem="TeZ-dG-fEW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" constant="-71.400000000000006" id="lR4-Qt-eDL"/>
+                            <constraint firstItem="pR8-lD-WTr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="ph5-ch-Ta2"/>
+                            <constraint firstItem="nfN-HY-Uoa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tnj-tS-AXu"/>
+                            <constraint firstItem="TeZ-dG-fEW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZC-6O-4HH"/>
+                            <constraint firstItem="Swz-LP-bxg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="vjg-17-R0f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="nfN-HY-Uoa" id="jMh-Hb-stL"/>
+                        <outlet property="numberDisplay" destination="TeZ-dG-fEW" id="Imd-T7-CgY"/>
+                        <outlet property="superView" destination="8bC-Xf-vdC" id="c7O-WQ-47F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="177.46478873239437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_portrait.png" width="3024" height="4032"/>
+    </resources>
+</document>
